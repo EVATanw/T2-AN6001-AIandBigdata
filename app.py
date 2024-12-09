@@ -6,7 +6,7 @@ import google.generativeai as genai
 
 api = os.getenv("makersuite")
 genai.configure(api_key=api)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash') #github 本地无法运行，因为没有apikey，在render里面给了apikey所以可以
 
 app = Flask(__name__)
 
