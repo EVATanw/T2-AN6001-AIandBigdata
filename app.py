@@ -4,10 +4,9 @@ from textblob import TextBlob
 import os
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyBJ0ZcRd5jeb3xkBzLspFUe_w_WuaTGdCI")
+api = os.getenv("makersuite")
+genai.configure(api_key=api)
 model = genai.GenerativeModel('gemini-1.5-flash')
-
-
 
 app = Flask(__name__)
 
